@@ -285,8 +285,8 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
   }
 
   return (
-    <div ref={scrollAreaRef} className="h-full">
-      <ScrollArea className="h-full [&_[data-slot=scroll-area-scrollbar]]:hidden">
+    <div ref={scrollAreaRef} className="h-fit">
+      <ScrollArea className="h-fit [&_[data-slot=scroll-area-scrollbar]]:hidden">
         <nav className="px-4 pb-6 text-sm">
           <p className="mb-3 text-xs font-medium tracking-wide text-muted-foreground uppercase">
             On this page

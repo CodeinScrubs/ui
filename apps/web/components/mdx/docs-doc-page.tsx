@@ -7,6 +7,7 @@ import { DocsPageFooter } from "@/components/docs-page-footer"
 import { TableOfContents } from "@/components/table-of-contents"
 import { ProximityToc } from "@/components/mdx/proximity-toc"
 import { BounceToc } from "@/components/mdx/bounce-toc"
+import { Sponsors } from "@/components/mdx/sponsors"
 import { processMarkdownForLlms } from "@/lib/markdown-docs"
 import { source } from "@/lib/source"
 import { SITE_URL } from "@/lib/site"
@@ -158,7 +159,7 @@ export default async function DocsDocPage({ slug }: { slug?: string[] }) {
         </article>
 
         <aside className="hidden w-44 shrink-0 xl:block">
-          <div className="sticky top-24 h-[calc(100vh-6rem)]">
+          <div className="sticky top-24">
             {tocVariant === "proximity" ? (
               <ProximityToc items={tocItems} />
             ) : tocVariant === "bounce" ? (
@@ -166,6 +167,7 @@ export default async function DocsDocPage({ slug }: { slug?: string[] }) {
             ) : (
               <TableOfContents items={tocItems} />
             )}
+            <Sponsors className="mt-6" />
           </div>
         </aside>
       </div>
@@ -185,8 +187,9 @@ export default async function DocsDocPage({ slug }: { slug?: string[] }) {
 
       {tocItems.length > 0 && (
         <aside className="hidden w-44 shrink-0 xl:block">
-          <div className="sticky top-24 h-[calc(100vh-6rem)]">
+          <div className="sticky top-24">
             <TableOfContents items={tocItems} />
+            <Sponsors className="mt-6" />
           </div>
         </aside>
       )}

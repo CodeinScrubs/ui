@@ -14,6 +14,7 @@ const navLinks = [
   { href: "/docs/components", label: "Components" },
   { href: "/blocks", label: "Blocks" },
   { href: "/templates", label: "Templates" },
+  { href: "/sponsors", label: "Sponsors" },
   { href: "https://icons.persian-labs.ir/", label: "Icons", external: true },
 ]
 
