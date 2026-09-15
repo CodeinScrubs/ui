@@ -52,7 +52,13 @@ jobs:
             const name = item.name
             // Namespaced registry names (e.g. "@persianlabsui/button") are
             // self-owned; bare names must not squat on a reserved namespace.
-            if (!name.startsWith("@") && reserved.has(`@${name}`)) {
+            // Exception: our own first-party "utils" lib (the cn() helper) —
+            // the conventional name shadcn also ships; not a namespace squat.
+            if (
+              !name.startsWith("@") &&
+              reserved.has(`@${name}`) &&
+              !(name === "utils" && item.type === "registry:lib")
+            ) {
               violations.push(`${file}: item "${name}" uses a reserved namespace`)
             }
           }
