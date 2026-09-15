@@ -1,9 +1,10 @@
 import Link from "next/link"
-import { PlusIcon } from "lucide-react"
+import { HeartIcon, PlusIcon } from "lucide-react"
 
 import { GithubIcon } from "@/components/icons"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { BECOME_SPONSOR_URL } from "@/components/mdx/sponsors"
 import { GITHUB_URL } from "@/lib/github"
 
 export default function Page() {
@@ -47,6 +48,15 @@ export default function Page() {
               >
                 View Components
               </Link>
+              <a
+                href={BECOME_SPONSOR_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-[35px] items-center gap-1.5 rounded-lg border border-border px-4 text-sm font-medium transition-colors hover:bg-muted"
+              >
+                <HeartIcon className="size-4 text-primary" />
+                Become a sponsor
+              </a>
             </div>
           </div>
         </section>
