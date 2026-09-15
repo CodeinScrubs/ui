@@ -174,7 +174,7 @@ function DialogFooter({
 }) {
   const defaultProps = {
     className: cn(
-      "flex flex-col-reverse gap-2 px-6 sm:flex-row sm:justify-end",
+      "flex flex-col-reverse gap-2 rounded-b-[inherit] px-6 sm:flex-row sm:justify-end",
       variant === "default" && "border-t border-border bg-muted/50 py-4",
       variant === "bare" &&
         "pt-4 pb-6 in-[[data-slot=dialog-popup]:has([data-slot=dialog-panel])]:pt-3",
