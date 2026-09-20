@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { PlusIcon } from "lucide-react"
 
+import { Badge } from "@/components/badge"
 import { AppLogo } from "@/components/app-logo"
 import { GitHubStars } from "@/components/github-stars"
 import { XIcon } from "@/components/icons"
@@ -13,7 +14,7 @@ const navLinks = [
   { href: "/docs", label: "Docs" },
   { href: "/docs/components", label: "Components" },
   { href: "/blocks", label: "Blocks" },
-  { href: "/templates", label: "Templates" },
+  { href: "/templates", label: "Templates", badge: "New" },
   { href: "/sponsors", label: "Sponsors" },
   { href: "https://icons.persian-labs.ir/", label: "Icons", external: true },
 ]
@@ -38,9 +39,10 @@ export function SiteHeader({
                 href={link.href}
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noreferrer" : undefined}
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 {link.label}
+                {"badge" in link && link.badge && <Badge>{link.badge}</Badge>}
               </a>
             ))}
           </nav>

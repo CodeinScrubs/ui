@@ -27,6 +27,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
+      {
+        protocol: "https",
+        hostname: "personal-taymkz.s3.ir-thr-at1.arvanstorage.ir",
+      },
     ],
   },
   async rewrites() {
@@ -73,7 +77,7 @@ const nextConfig: NextConfig = {
               "default-src 'self'",
               "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com",
               "style-src 'self' 'unsafe-inline'",
-              "img-src 'self' data: https://images.unsplash.com https://github.com",
+              "img-src 'self' data: https://images.unsplash.com https://github.com https://personal-taymkz.s3.ir-thr-at1.arvanstorage.ir",
               "font-src 'self' data:",
               "connect-src 'self' https://va.vercel-scripts.com",
               "frame-ancestors 'self'",

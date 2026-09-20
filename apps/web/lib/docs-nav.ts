@@ -223,7 +223,7 @@ export const docsNav: DocsNavGroup[] = [
     title: "Resources",
     items: [
       { title: "Blocks", href: "/blocks" },
-      { title: "Templates", href: "/templates" },
+      { title: "Templates", href: "/templates", badge: "New" },
     ],
   },
 ]
