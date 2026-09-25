@@ -96,6 +96,7 @@ const COMPONENT_GROUPS: { group: string; slugs: string[] }[] = [
     slugs: [
       "bank-input",
       "button",
+      "calendar",
       "checkbox",
       "city-selector",
       "combobox",
